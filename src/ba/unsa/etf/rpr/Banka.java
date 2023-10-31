@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Banka {
     private long brojRacuna;
@@ -27,7 +28,13 @@ public class Banka {
     }
     public Racun KreirajRacunZaKorisnika(Korisnik korisnik){
         Racun novi = null;
-        //dovrsiii!!!!!!!!!!!!!
+        for(int i = 0 ; i<this.korisnici.size(); i++){
+            if(this.korisnici.get(i).equals(korisnik)){
+                Long brRac =(new Random()).nextLong();
+                novi = new Racun(brRac,this.korisnici.get(i));
+                break;
+            }
+        }
         return novi;
     }
 }
