@@ -3,6 +3,8 @@ package ba.unsa.etf.rpr;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ImenikTest {
@@ -36,5 +38,25 @@ class ImenikTest {
     void dajBrojNema() {
         String s = imenik.dajBroj("Amela");
         assertNull(s);
+    }
+
+    @Test
+    public void testMockExternal(){
+        Imenik i = Mockito.mock(Imenik.class);
+        Mockito.when(i.dajBroj("Amila").thenReturn("Nije oke"));
+
+        String s = i.dajBroj("Amila");
+        assertEquals(s,"Nije oke");
+    }
+
+    @Test
+    public void testMocking(){
+        Map<String, TelefonskiBroj> m = Mockito.mock(Map.class);
+        Mockito.when(m.get("Amila")).thenReturn(new FiksniBroj(Grad.BANOVICI,"123-456"));
+        imenik.setBrojevi(m);
+
+        String s = imenik.dajBroj("Amila");
+        assertNotEquals(s,"033/123-456");
+        assertEquals(s,"035/123-456");
     }
 }
