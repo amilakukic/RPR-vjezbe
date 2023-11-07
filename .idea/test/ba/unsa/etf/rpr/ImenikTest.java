@@ -2,6 +2,7 @@ package ba.unsa.etf.rpr;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 import java.util.Map;
 
@@ -43,7 +44,7 @@ class ImenikTest {
     @Test
     public void testMockExternal(){
         Imenik i = Mockito.mock(Imenik.class);
-        Mockito.when(i.dajBroj("Amila").thenReturn("Nije oke"));
+        Mockito.when(i.dajBroj("Amila"));
 
         String s = i.dajBroj("Amila");
         assertEquals(s,"Nije oke");
