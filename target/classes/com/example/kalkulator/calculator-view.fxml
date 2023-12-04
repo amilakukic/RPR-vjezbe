@@ -99,7 +99,7 @@
                      <Font size="14.0" />
                   </font>
                </Button>
-               <Button minWidth="30.0" mnemonicParsing="false" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <Button minWidth="30.0" mnemonicParsing="false" onAction="#handleButtonClick" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                   <font>
                      <Font size="14.0" />
                   </font>
