@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="359.0" maxWidth="586.0" minHeight="359.0" minWidth="586.0" prefHeight="359.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.korisnici.lv7i8.KorisniciController">
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="321.6" minWidth="275.6" prefWidth="275.6" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="310.4" minWidth="264.4" prefWidth="310.4" />
+    </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints vgrow="ALWAYS" />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+
+    <GridPane layoutX="410.0" layoutY="58.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" translateX="20.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+
+        <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="40.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="40.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="40.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="40.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="40.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="40.0" valignment="CENTER" vgrow="ALWAYS" />
+        </rowConstraints>
+
+        <Label text="   Ime:" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+        <TextField fx:id="name" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" promptText="Unesite ime..." GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font></TextField>
+
+        <Label text="   Prezime:" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+        <TextField fx:id="lName" maxWidth="-Infinity" promptText="Unesite prezime..." GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font></TextField>
+
+        <Label text="   E-mail:" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+        <TextField fx:id="eMail" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Unesite email..." GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font></TextField>
+
+        <Label prefHeight="18.0" prefWidth="104.0" text="   Korisničko ime:" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
+        <TextField fx:id="kIme" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Unesite korisničko ime..." GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font></TextField>
+
+        <Label text="   Lozinka:" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS" />
+        <PasswordField fx:id="passw" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Unesite lozinku..." GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font></PasswordField>
+
+        <Button fx:id="dodaj" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" minWidth="65.0" mnemonicParsing="false" onAction="#handleButtonClick" text="Dodaj" translateX="45.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <Button fx:id="kraj" minWidth="65.0" mnemonicParsing="false" onAction="#handleKrajClick" text="Kraj" textFill="#1b1b1b" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <Button minWidth="65.0" mnemonicParsing="false" onAction="#handleAzurirajClick" text="Ažuriraj" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    </GridPane>
+    <GridPane style="-fx-background-color: babyBlue;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="101.0" minWidth="10.0" prefWidth="53.8" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="217.4000038146973" minWidth="10.0" prefWidth="186.59999999999997" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="100.0" minWidth="10.0" prefWidth="51.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+        </rowConstraints>
+        <children>
+            <ListView fx:id="listaK" prefHeight="200.0" prefWidth="234.0" style="-fx-border-color: lightBlue;" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="3" />
+        </children>
+    </GridPane>
+
+</GridPane>
