@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.labrpr.GradController">
+
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+
+    <Label text="Naziv:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="fieldNaziv" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+    <Label text="Broj stanovnika:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="fieldBrStanovnika" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label text="Država:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <ChoiceBox fx:id="choiceDrzava" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <ButtonBar GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <buttons>
+            <Button fx:id="btnOk" onAction="#handleOk" text="Ok" />
+            <Button fx:id="btnCancel" onAction="#handleCancel" text="Cancel" />
+        </buttons>
+    </ButtonBar>
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+
+</GridPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.Label?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="ba.unsa.etf.rpr.labrpr.DrzavaController">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <Label text="Naziv:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="fieldNaziv" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+    <Label text="Glavni grad:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <ChoiceBox fx:id="choiceGrad" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <ButtonBar GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <buttons>
+            <Button fx:id="btnOk" text="Ok" onAction="#handleOk"/>
+            <Button fx:id="btnCancel" text="Cancel" onAction="#handleCancel"/>
+        </buttons>
+    </ButtonBar>
+
+</GridPane>

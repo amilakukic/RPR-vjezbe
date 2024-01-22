@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.labrpr.GlavniController">
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" />
+        <ColumnConstraints hgrow="SOMETIMES" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="SOMETIMES" />
+    </rowConstraints>
+
+    <TableView fx:id="tableViewGradovi" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colGradId" text="ID" />
+            <TableColumn fx:id="colGradNaziv" text="Naziv" />
+            <TableColumn fx:id="colGradBrStanovnika" text="Stanovnika" />
+            <TableColumn fx:id="colGradDrzava" text="Država" />
+        </columns>
+    </TableView>
+
+    <VBox spacing="10" GridPane.columnIndex="1">
+        <Button fx:id="btnDodajGrad" minWidth="85.0" onAction="#handleDodajGrad" text="Dodaj grad" />
+        <Button fx:id="btnDodajDrzavu" minWidth="85.0" onAction="#handleDodajDrzavu" text="Dodaj državu" />
+        <Button fx:id="btnIzmijeniGrad" minWidth="85.0" onAction="#handleIzmijeniGrad" text="Izmijeni grad" />
+        <Button fx:id="btnObrisiGrad" minWidth="85.0" onAction="#handleObrisiGrad" text="Obriši grad" />
+    </VBox>
+
+</GridPane>
